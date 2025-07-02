@@ -1,16 +1,197 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>LiveLab 4 Demo</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nomadiq Travel Destinations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest-green: #3a6b5e;
+      --misty-sky: #d6ebe9;
+      --soft-leaf: #b3d6c6;
+      --earthy-sand: #edece4;
+      --deep-teal: #5a8880;
+    }
+    body {
+      margin: 0;
+      font-family: 'Fredoka', sans-serif;
+      background-color: #f5fbf7;
+      color: #2e4637;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--forest-green);
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--deep-teal);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--soft-leaf);
+    }
+    .hero {
+      background: var(--misty-sky);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--forest-green);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 1rem auto;
+    }
+    .about {
+      background: var(--earthy-sand);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .about-content {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .about h2 {
+      font-size: 2.4rem;
+      color: var(--forest-green);
+    }
+    .cta {
+      background: var(--soft-leaf);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .cta h3 {
+      font-size: 1.8rem;
+      color: var(--deep-teal);
+    }
+    .cta-button {
+      margin-top: 1rem;
+      background: var(--misty-sky);
+      color: #1d2f2c;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      background: var(--forest-green);
+      color: white;
+      transform: scale(1.05);
+    }
+    .destinations {
+      background: var(--earthy-sand);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .destinations h2 {
+      font-size: 2.5rem;
+      color: var(--forest-green);
+      margin-bottom: 2rem;
+    }
+    .card-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      color: var(--deep-teal);
+      margin-top: 1rem;
+    }
+    .card p {
+      padding: 0 1rem 1.5rem;
+    }
+  </style>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+  <header>
+    <div class="logo">🌿 Nomadiq Travel Destinations</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Destinations</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <h1>Explore Sustainable Travel</h1>
+    <p>Discover the beauty of the planet while making conscious choices. Nomadiq connects you with eco-friendly destinations, supports local communities, and helps preserve nature for future generations.</p>
+  </section>
+
+  <section class="about">
+    <div class="about-content">
+      <h2>About Nomadiq Travel Destinations</h2>
+      <p>Nomadiq is committed to eco-conscious travel that inspires exploration while preserving the environment. We empower travelers to reduce their footprint by connecting them with sustainable destinations and responsible tourism practices around the globe.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-content">
+      <h3>Ready to travel responsibly?</h3>
+      <button class="cta-button">Plan Your Trip</button>
+    </div>
+  </section>
+
+  <section class="destinations">
+    <h2>Top Eco-Friendly Destinations</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1558981403-c5f9891ba02a" alt="Lush Forest in Costa Rica">
+        <h3>Costa Rica</h3>
+        <p>Rainforests, wildlife, and a leading global example in eco-tourism.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1602526214723-cb11f79e4184" alt="Green valley in Switzerland">
+        <h3>Switzerland</h3>
+        <p>Scenic rail travel, green valleys, and sustainability at its heart.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Coastal Beach in New Zealand">
+        <h3>New Zealand</h3>
+        <p>Eco-lodges, marine preserves, and stunning natural beauty.</p>
+      </div>
+    </div>
+  </section>
+</body>
 </html>
